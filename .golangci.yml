@@ -1,0 +1,24 @@
+run:
+  tests: true
+
+linters:
+  enable-all: true
+  disable:
+    - golint
+    - interfacer
+    - deadcode
+    - exhaustivestruct
+    - maligned
+    - scopelint
+    - nosnakecase
+    - structcheck
+    - ifshort
+    - varcheck
+    - gci
+#    - wrapcheck
+    - depguard
+    - exhaustruct
+linters-settings:
+  gci:
+    local-prefixes: reaktions/
+go: "1.20"

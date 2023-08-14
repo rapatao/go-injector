@@ -17,7 +17,7 @@ to your code, and then `go [build|run|test]` will automatically fetch the necess
 Otherwise, run the following Go command to install the injector package:
 
 ```shell
-go get -u https://github.com/rapatao/go-injector
+go get -u github.com/rapatao/go-injector
 ```
 
 ### Using Injector

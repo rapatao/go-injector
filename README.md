@@ -80,3 +80,4 @@ go run example.go
 
 # Contributing
 
+Please see [CONTRIBUTING](CONTRIBUTING.md) for details on submitting patches and the contribution workflow.

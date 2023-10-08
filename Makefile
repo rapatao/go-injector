@@ -1,13 +1,17 @@
-GOCMD=go
+COVER_FILE=coverage.out
 
-all: deps lint test
+all: deps test
 
 test: deps
-	$(GOCMD) test -v -count=1 -cover ./...
+	go test -v -count=1 -coverprofile $(COVER_FILE) -cover ./...
 
 deps:
-	$(GOCMD) mod tidy
-	$(GOCMD) mod vendor
+	go mod tidy
+	go mod vendor
+
+bump-deps:
+	go get -u ./...
+	$(MAKE)
 
 lint:
 	golangci-lint run

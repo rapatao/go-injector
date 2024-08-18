@@ -42,7 +42,7 @@ func (c *Container) Register(instance interface{}) error {
 // the Initialize method will be invoked, returning the given error in case of failure.
 //
 // If it isn't present and do not implement the injector.Injectable,
-// the error injector.ErrNotInitializable will be returned.
+// the error injector.ErrInitializingType will be returned.
 //
 // The argument must be a non-nil pointer, or an error injector.ErrNilPointer is returned.
 func (c *Container) Get(desired interface{}) error {

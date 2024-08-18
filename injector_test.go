@@ -71,7 +71,7 @@ func TestGet_failures(t *testing.T) {
 
 	var notAc NotAutoConfigurable
 	err = container.Get(&notAc)
-	assert.ErrorIs(t, err, injector.ErrNotInitializable)
+	assert.ErrorIs(t, err, injector.ErrInitializingType)
 
 	var failAc FailureAutoConfigurable
 	err = container.Get(&failAc)
@@ -79,7 +79,7 @@ func TestGet_failures(t *testing.T) {
 
 	var dep AutoConfigurableWithDep
 	err = container.Get(&dep)
-	assert.ErrorIs(t, err, injector.ErrNotInitializable)
+	assert.ErrorIs(t, err, injector.ErrInitializingType)
 }
 
 func TestGet_auto(t *testing.T) {

@@ -11,10 +11,6 @@ var (
 	// ErrNilValue is returned when a nil argument is used when invoking a function.
 	ErrNilValue = errors.New("value should be non-nil")
 
-	// ErrNotInitializable is returned when a struct is not present in the injector context,
-	// and it did not implement injector.Injectable.
-	ErrNotInitializable = errors.New("unable to initialize the type")
-
-	// ErrInitializing is returned when a failure happens during the struct initialization.
-	ErrInitializing = errors.New("failed to initialize struct")
+	// ErrInitializingType is returned when a failure happens during the type initialization.
+	ErrInitializingType = errors.New("failed to initialize type")
 )

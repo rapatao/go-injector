@@ -88,5 +88,5 @@ func (c *Container) autoConfigure(name string, desired interface{}) error {
 		return nil
 	}
 
-	return fmt.Errorf("%w, type: \"%s\"", ErrNotInitializable, name)
+	return fmt.Errorf("%w, type: \"%s\"", ErrInitializingType, name)
 }

@@ -13,4 +13,6 @@ var (
 
 	// ErrInitializingType is returned when a failure happens during the type initialization.
 	ErrInitializingType = errors.New("failed to initialize type")
+
+	ErrMissingInstance = errors.New("missing instance initialization")
 )
